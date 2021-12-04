@@ -7,6 +7,7 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const indexRouter = require("./routes/index");
 const authorRouter = require("./routes/authors");
+const bookRouter = require("./routes/books");
 const bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
@@ -19,9 +20,6 @@ app.use(expressLayouts);
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 
-app.use("/", indexRouter);
-app.use("/authors", authorRouter);
-
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -33,5 +31,9 @@ db.on("error", (error) => {
 db.once("open", () => {
   console.log("connected to mongoose");
 });
+
+app.use("/", indexRouter);
+app.use("/authors", authorRouter);
+app.use("/books", bookRouter);
 
 app.listen(process.env.PORT || 3000);
