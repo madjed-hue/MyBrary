@@ -5,8 +5,8 @@ FilePond.registerPlugin(
 );
 
 FilePond.setOptions({
-  stylePanelAspectRatio: 250 / 200,
-  imageResizeTargetWidth: 200,
+  stylePanelAspectRatio: 250 / 180,
+  imageResizeTargetWidth: 180,
   imageResizeTargetHeight: 250,
 });
 
