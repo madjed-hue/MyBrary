@@ -1,11 +1,24 @@
 <header>
-  <nav>
-    <a href="/">MyBrary</a>
-    <ul>
-      <li><a href="/authors">All Authors</a></li>
-      <li><a href="/authors/new">Add Author</a></li>
-      <li><a href="/books">All Books</a></li>
-      <li><a href="/books/new">Add Book</a></li>
-    </ul>
+  <nav class="header-nav">
+    <a class="header-title" href="/">MyBrary</a>
+    <div class="wide-menu">
+      <ul>
+        <li><a href="/authors">All Authors</a></li>
+        <li><a href="/authors/new">Add Author</a></li>
+        <li><a href="/books">All Books</a></li>
+        <li><a href="/books/new">Add Book</a></li>
+      </ul>
+    </div>
+    <div class="burger-menu" id="burger-menu">
+      <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+      </div>
+      <ul id="menu-list" class="menu-list">
+        <li><a href="/authors">All Authors</a></li>
+        <li><a href="/authors/new">Add Author</a></li>
+        <li><a href="/books">All Books</a></li>
+        <li><a href="/books/new">Add Book</a></li>
+      </ul>
+    </div>
   </nav>
 </header>

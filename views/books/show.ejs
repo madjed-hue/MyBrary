@@ -1,4 +1,4 @@
-<h2><%= book.title %></h2>
+<h2 class="page-header"><%= book.title %></h2>
 <img
   width="180"
   height="250"
@@ -10,6 +10,6 @@
 <div>Page Count : <%= book.pageCount %></div>
 <div>Description : <%= book.description %></div>
 
-<a href="/books/<%=book.id%>/edit">Edit</a>
+<a class="btn btn-secondary" href="/books/<%=book.id%>/edit">Edit</a>
 <div><%- include("../partials/deleteform", {url:`/books/${book.id}`}) %></div>
-<a href="/authors/<%=book.author.id%>">View Author</a>
+<a class="btn btn-primary" href="/authors/<%=book.author.id%>">View Author</a>

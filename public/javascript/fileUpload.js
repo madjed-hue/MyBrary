@@ -11,4 +11,3 @@ FilePond.setOptions({
 });
 
 FilePond.parse(document.body);
-console.log(document.body);

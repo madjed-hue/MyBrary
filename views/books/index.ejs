@@ -20,12 +20,12 @@
       value="<%= searchOptions.publishedBefore %>"
     />
   </div>
-  <button type="submit">Search</button>
+  <button class="btn btn-primary" type="submit">Search</button>
 </form>
 <br />
 <div>
   <% books.forEach(book => { %>
-  <a href="/books/<%=book.id%>">
+  <a class="btn btn-primary" href="/books/<%=book.id%>">
     <img src="<%= book.coverImagePath %>" alt="" height="250" width="180" />
   </a>
   <% }) %>
