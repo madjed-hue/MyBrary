@@ -1,10 +1,9 @@
 <h2 class="page-header"><%= author.name %></h2>
-<a class="btn btn-secondary" href="/authors/<%= author.id %>/edit">Edit</a>
-<%- include("../partials/deleteform", {url : `/authors/${author.id}`}) %> <%
-if(booksByAuthor.length>0) { %>
-<h2>Books By Author</h2>
-<% booksByAuthor.forEach(book => { %>
-<a href="/books/<%=book.id%>">
-  <img src="<%= book.coverImagePath %>" alt="" height="250" width="180" />
-</a>
-<% }) %> <%} %>
+<div class="btn-row">
+  <a class="btn btn-secondary" href="/authors/<%= author.id %>/edit">Edit</a>
+
+  <%- include("../partials/deleteform", {url : `/authors/${author.id}`}) %>
+</div>
+<% if(booksByAuthor.length>0) { %>
+<h2 class="page-header">Books By Author</h2>
+<%- include("../partials/bookGrid", {books : booksByAuthor}) %> <%} %>

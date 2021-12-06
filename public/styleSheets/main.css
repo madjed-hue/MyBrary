@@ -2,6 +2,9 @@
 @import "shared/fonts.css";
 @import "shared/header.css";
 @import "shared/buttons.css";
+@import "shared/form.css";
+@import "shared/author.css";
+@import "shared/book.css";
 
 *,
 *::after,
@@ -36,4 +39,7 @@ body {
 }
 ul {
   list-style: none;
+}
+.error-msg {
+  color: hsl(var(--color-danger-hue), 100%, 60%);
 }
